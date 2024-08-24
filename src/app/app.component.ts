@@ -5,7 +5,6 @@ import { UserComponent } from './user/user.component';
 import { DUMMY_USERS } from './dummy-users';
 import { TasksComponent } from './tasks/tasks.component';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,13 +15,13 @@ import { TasksComponent } from './tasks/tasks.component';
 export class AppComponent {
   users = DUMMY_USERS;
   title = 'first-angular-app';
-  selectedId = 'u1';
+  selectedUserId?: string;
 
   get selectedUser() {
-    return this.users.find((user) => user.id === this.selectedId);
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectUser(id: string) {
-    this.selectedId = id;
+    this.selectedUserId = id;
   }
 }
