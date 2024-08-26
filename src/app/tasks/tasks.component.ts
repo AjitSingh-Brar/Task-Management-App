@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { type NewTaskData } from './task/task.model';
+import uniqid from 'uniqid';
 
 // interface User {
 //   id: string;
@@ -56,6 +58,17 @@ export class TasksComponent {
   }
 
   onCancelAddTask(){
+    this.isAddingTask = false;
+  }
+
+  onAddTask(taskData: NewTaskData) {
+    this.tasks.unshift({
+      id: uniqid('t-'),
+      userId: this.userId,
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.date
+    })
     this.isAddingTask = false;
   }
 }
