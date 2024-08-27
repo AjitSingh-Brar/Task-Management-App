@@ -7,7 +7,7 @@
 
 <p align="center">This application allows the user to add tasks or mark tasks to be completed on an enterprise level</p>
 
-![demo](https://github.com/AjitSingh-Brar/Task-Management-App/blob/main/src/assets/demo.jpg)
+![demo](https://github.com/AjitSingh-Brar/Task-Management-App/blob/main/src/assets/Demo.jpg)
 
 
 ## 🛠 Installation & Set Up
